@@ -1,5 +1,6 @@
 The proposed application shows how to exploit Hama for addressing the in
 uence maximization problem. Since social media platforms are increasingly used to convey advertising campaigns for products or services, the goal is to identify a set of k users in a social network, namely seeds, that maximizes the spread (i.e., the number of influenced users). The application is based on a bio-inspired technique, called the Artificial Bee Colony, and belongs to the field of swarm intelligence that focuses on the study of self-organized systems in which a complex action derives from a collective intelligence. The ABC system is composed of three main entities:
+
 • Food source, characterized by its goodness in terms of quantity of nectar or
 distance from the hive;
 • Employer bees, which collect the nectar and carry details about the source of
