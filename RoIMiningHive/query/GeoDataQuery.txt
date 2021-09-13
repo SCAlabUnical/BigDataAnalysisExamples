@@ -1,0 +1,8 @@
+-- Call the Java GeoData method and returns the most visited RoIs
+-- create temporary function GeoData as 'GeoData';
+
+SELECT GeoData(tags, description) AS PoI, COUNT(username) AS tot
+FROM data
+WHERE tags IS NOT NULL AND description IS NOT NULL
+GROUP BY GeoData(tags, description)
+ORDER BY tot DESC;

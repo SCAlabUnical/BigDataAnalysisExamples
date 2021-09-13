@@ -1,0 +1,7 @@
+-- Invoke the Java DbscanUDAF and group rows based on the name of RoIs
+-- create temporary function DbscanUDAF as 'DbscanUDAF';
+ 
+SELECT DbscanUDAF(latitude, longitude) AS RoI
+FROM data
+WHERE latitude IS NOT NULL AND longitude IS NOT NULL
+GROUP BY GeoData(tags, description);
