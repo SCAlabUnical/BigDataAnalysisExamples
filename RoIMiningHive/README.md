@@ -13,7 +13,7 @@ In this application data is collected from Flickr, a social network used for sha
 ing photos. The initial goal is to assign a generic geo-localized Flickr post to the
 corresponding PoI, through an analysis of the textual content and metadata of the
 post (tags and description). After assigning each post to its PoI, the geographical
-coordinates hlongitude;latitudei are aggregated through DBSCAN (Density-Based Spatial Clustering of
+coordinates <longitude;latitude> are aggregated through DBSCAN (Density-Based Spatial Clustering of
 Applications with Noise), a density-based clustering algorithm
 that exploits information on the density of points to identify clusters that are repre-
 sentative of a RoI. The cluster with the largest size represents the most significant
