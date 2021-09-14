@@ -42,15 +42,15 @@ and sorted by the number of visitors (order by clause).
 At this point data is ready for clustering analysis. To launch the DBSCAN algorithm
 it is required the implementation of an UDAF, which applies a function to
 multiple rows of a table by implementing five methods:
-• init(): it initializes the evaluator, which actually implements the UDAF logic;
-• iterate(): it is called whenever there is a new value to aggregate;
-• terminatePartial(): it is called for the partial aggregation, and returns an
+- init(): it initializes the evaluator, which actually implements the UDAF logic;
+- iterate(): it is called whenever there is a new value to aggregate;
+- terminatePartial(): it is called for the partial aggregation, and returns an
 object that encapsulates the state of the aggregation;
-• merge(): it is called to combine a partial aggregation with another;
-• terminate(): it is called when the final result of the aggregation is required.
+- merge(): it is called to combine a partial aggregation with another;
+- terminate(): it is called when the final result of the aggregation is required.
 In particular, DBSCAN is launched on the points belonging to the same RoI,
-where the name of a RoI is obtained using the previously defined GeoData function,
-as shown in Listing 21. Since DBSCAN should find more than one cluster, the one
+where the name of a RoI is obtained using the previously defined GeoData function.
+Since DBSCAN should find more than one cluster, the one
 containing the highest number of points is chosen and returned as a KML (Keyhole
 Markup Language) string.
 
