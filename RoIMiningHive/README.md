@@ -29,7 +29,7 @@ contains the set of tags, separated by commas, which give additional information
 The first step is to map a Flickr tuple to the corresponding PoI. It can be done
 by defining an UDF that allows to run custom Java code within a Hive script;
 in particular, a Regular UDF works on a single row of a table and produces a
-single output row. The assignRoI method of Listing 19 checks if the tags and the
+single output row. The assignRoI method checks if the tags and the
 description contain a keyword of the file loaded as input and returns the name of
 the RoI (e.g., the Colosseum is also called the Flavian Amphitheater, Coliseo, etc.).
 
